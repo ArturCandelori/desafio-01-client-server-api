@@ -36,7 +36,7 @@ type ResponseToClient struct {
 
 func main() {
 	// connect to db and create table
-	db, err := gorm.Open(sqlite.Open("file::memory:"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("cotacoes.db"), &gorm.Config{})
 	if err != nil {
 		panic(err)
 	}
